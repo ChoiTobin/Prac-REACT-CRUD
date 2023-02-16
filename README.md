@@ -6,3 +6,4 @@
 <br/>1.compound component - 폴더 설계만 하였고 데이터를 활용하지 못함
 <br/>2.평소에 쓰던 axios 대신 fetch사용
 <br/>3.context 사용하려 했으나 컴포넌트가 얕아 불필요하다고 생각 하여 배제
+<br/>4.반응형을 간편하게 구현하기 위해 tailwindCSS 사용 - +Tailwind CSS IntelliSense
