@@ -25,17 +25,15 @@ const Total = () => {
         todo: inputValue.text,
       }),
     }).then(response => {
-   
-      
-
     })
   }
 
   
   return (
     <>
-      <input onChange={onChange} name="text" type="text" value={text} data-testid="new-todo-input" />
-      <button onClick={addServer} data-testid="new-todo-add-button">추가</button>
+      <input  className="w-3/4 font-bold border-4 border-blue-600/50 w-2/4 rounded" onChange={onChange} name="text" type="text" value={text} data-testid="new-todo-input" />
+      <button className='w-1/4 font-bold bg-blue-500 border-4 border-blue-600/50 rounded' onClick={addServer} data-testid="new-todo-add-button">추가</button>
+
     </>
   )
 }

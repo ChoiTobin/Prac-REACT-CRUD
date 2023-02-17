@@ -80,33 +80,35 @@ const List = () => {
 
   return (
     <>
+    <div className="bg-green-600 border-solid border-8 border-stone-500">
       {
       todos.map((todo) => (
-        <li key={todo.id}>
-          <label>
-            <input type="checkbox" />
-            <span>{todo.todo}</span>
-          </label>
-          {editTg.isEdit == false && editTg.id == todo.id ? (
-            <>
-             <input onChange={onChange} name="text" value={text} type="text" />
-              <button onClick={()=> saveFunction(todo.id)} >저장</button>
-              <button onClick={() => setEditTg({id: 0, isEdit: true})}>취소</button>
-            
-            </>
-            
-          ) 
-          : (
-            <>
-              <button onClick={() => {editToggleHandler(todo.id)}}>수정</button>
-              <button onClick={()=> {deleteToggleHandler(todo.id)}}>삭제</button>
-           
-
-
-             </>
-          )}
+        
+        <li  className="w-2/4 h-2/4 mx-auto list-none " key={todo.id}  >
+           <div className="py-1"> 
+              <label>
+                <input type="checkbox" className="form-checkbox h-5 w-11 "/>
+                <span className="font-bold bg-">{todo.todo}</span>
+              </label>
+            </div>
+            {editTg.isEdit == false && editTg.id == todo.id ? (
+              <>
+                <input className="font-bold	bg-blue-200 text-white py-1 px-2 rounded" onChange={onChange} name="text" value={text} type="text" />
+                  <div className="py-1">
+                    <button className='font-bold bg-blue-500 border-2 border-blue-600/50 rounded' onClick={()=> saveFunction(todo.id)} >저장</button>
+                    <button className='mx-3 font-bold bg-gray-500 border-2 border-gray-600/50 rounded' onClick={() => setEditTg({id: 0, isEdit: true})}>취소</button>
+                  </div>
+              </>
+            ) : (
+              <>
+                <button className='font-bold bg-blue-500 border-2 border-blue-600/50 rounded' onClick={() => {editToggleHandler(todo.id)}}>수정</button>
+                <button className='mx-3 font-bold bg-gray-500 border-2 border-gray-600/50  rounded' onClick={()=> {deleteToggleHandler(todo.id)}}>삭제</button>
+              </>
+            )}
+             
         </li>
       ))}
+      </div>
     </>
   );
 };

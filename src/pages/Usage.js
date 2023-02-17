@@ -1,15 +1,16 @@
 import React from 'react'
 import Main from './Main'
-
-
 const Usage = () => {
-  
 
 return (
-        <Main >
-          <Main.Total />
+       <>
+        <Main>
+          <Main.Header/>
           <Main.List />
+          <Main.Total />
         </Main>
+
+        </>
     )
   }
 
